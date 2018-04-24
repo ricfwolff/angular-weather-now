@@ -1,10 +1,14 @@
-<div class="card text-center" 
-  style="min-height: 225px;width: 250px;max-width: 250px;min-width: 250px">
-  <div class="card-header">
+<div class="card text-center width-250 wn-box-shadow wn-no-margin">
+  <div class="card-header bg-white">
     {{city.name}},&nbsp;{{city.country}}
   </div>
-  <div class="card-block" style="height: 100%;">
-    <p class="card-text" style="height: 100%;">{{city.temperature}}</p>
+  <div class="card-block height-140 line-height-140">
+    <p class="card-text wn-font-5-em"
+      [ngClass]="{'wn-color-blue': city.temperature < 6, 
+                  'wn-color-orange': city.temperature >= 6 && city.temperature < 26,
+                  'wn-color-red': city.temperature >= 26}">
+      {{city.temperature}}&deg;
+    </p>
   </div>
-  <div class="card-footer">{{city.humidity}}</div>
+  <div class="card-footer wn-footer-bg-color">{{city.humidity}}</div>
 </div>

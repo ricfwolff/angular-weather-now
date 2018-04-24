@@ -1,22 +1,15 @@
-<div class="flex-container wn-toolbar"
-  fxLayout="row"
-  fxLayoutAlign="center center">
-  <img src="../assets/logo.svg" alt="Weather Now Logo">
-</div>
-<div
-  class="flex-container flex-stretch"
-  fxLayout="row"
-  fxLayout.xs="column"
-  fxLayout.sm="column"
-  fxLayoutAlign="center center"
-  fxLayoutAlign.xs="start">
-
-  <div *ngFor="let city of cities"
-    class="flex-item padding-sides-24 card-deck" 
-    fxFlex="298px" 
-    fxFlex.sm="100%" 
-    fxFlex.xs="100%">
-    <app-city-weather-card [city]="city">
-      </app-city-weather-card>
-  </div>
+<nav class="navbar fixed-top navbar-light 
+  bg-light bg-white height-55 wn-box-shadow">
+  <img src="../assets/logo.svg" height="25px" 
+    class="flex-stretch" alt="Weather Now Logo">
+</nav>
+<div class="flex-stretch padding-top-55 padding-bottom-24" 
+  fxLayout="row" fxLayout.xs="column" 
+  fxLayout.sm="column" fxLayoutAlign="center center">
+  <app-city-weather-card [city]="city" *ngFor="let city of cities" 
+    class="flex-item padding-sides-24 padding-top-25 
+      card-deck wn-no-margin" 
+    fxFlex="298px"
+    fxFlex.sm="100%" fxFlex.xs="100%">
+  </app-city-weather-card>
 </div>

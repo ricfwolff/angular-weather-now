@@ -13,7 +13,7 @@ export class AppComponent {
     {
       name: 'Nairobi',
       country: 'KE',
-      temperature: 20,
+      temperature: 26,
       humidity: 90
     },
     {
