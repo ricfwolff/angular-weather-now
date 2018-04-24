@@ -12,16 +12,19 @@ export class AppComponent {
   cities:  City[] = [
     {
       name: 'Nairobi',
+      country: 'KE',
       temperature: 20,
       humidity: 90
     },
     {
       name: 'Urubici',
+      country: 'BR',
       temperature: 15,
       humidity: 90
     },
     {
       name: 'Nuuk',
+      country: 'GL',
       temperature: -5,
       humidity: 90
     }

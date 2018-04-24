@@ -1,3 +1,7 @@
 <mat-card>
-  {{city.name}}
+  <mat-card-title>{{city.name}},&nbsp;{{city.country}}</mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>{{city.temperature}}º</mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-footer>{{city.humidity}}</mat-card-footer>
 </mat-card>
