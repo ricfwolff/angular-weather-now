@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatButtonModule, MatCheckboxModule, MatCardModule, MatToolbarModule} from '@angular/material';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 import { AppComponent } from './app.component';
+import { CityWeatherCardComponent } from './city-weather-card/city-weather-card.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CityWeatherCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,28 @@
+<mat-toolbar class="flex-container wn-toolbar"
+  fxLayout="row"
+  fxLayoutAlign="center center">
+  <img src="../assets/logo.svg" alt="Weather Now Logo">
+</mat-toolbar>
+<div
+  class="flex-container flex-stretch"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutAlign="center center"
+  fxLayoutAlign.xs="start">
 
-<h1>
-  {{ title }}
-</h1>
+  <div *ngFor="let city of cities"
+    class="flex-item" fxFlex="33%" fxFlex.xs="100%">
+    <app-city-weather-card [city]="city">
+      </app-city-weather-card>
+  </div>
+<!--   <div class="flex-item" fxFlex="33%" fxFlex.xs="100%">
+    card urubici
+  </div>
+  <div class="flex-item" fxFlex="33%" fxFlex.xs="100%">
+    card nairobi
+  </div>
+  <div class="flex-item" fxFlex="33%" fxFlex.xs="100%">
+    card nuuk
+  </div> -->
+</div>
+<button mat-button>My button</button>
