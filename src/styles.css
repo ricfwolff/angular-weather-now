@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+@import "~bootstrap/dist/css/bootstrap.css";
 
 html, body {
     height: 100%;
@@ -16,6 +17,35 @@ body {
     min-height: 100%;
 }
 
-.flex-stretch {
-    flex: 1;
+.wn-color-blue {
+    color: #69A3FF;
+}
+
+.wn-color-orange {
+    color: #FF9632;
+}
+
+.wn-color-red {
+    color: #ED1946;
+}
+
+.wn-color-text-light {
+    color: #B4B4B4;
+}
+
+.wn-color-text-default {
+    color: #737C84;
+}
+
+.wn-app-bg-color {
+    background-color: #F1F1F1;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.wn-box-shadow {
+    box-shadow: 1px 1px 2px #333333;
+    box-shadow: 1px 1px 2px rgba(51, 51, 51, .1);
 }

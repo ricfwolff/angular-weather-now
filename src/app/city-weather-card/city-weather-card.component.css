@@ -1,0 +1,30 @@
+.height-182 {
+    min-height: 182px;
+    max-height: 182px;
+}
+
+.line-height-182 {
+    line-height: 182px;
+}
+
+.width-250 {
+    min-width: 250px;
+    max-width: 250px;
+    width: 250px;
+}
+
+.wn-bottom-divider {
+    border-bottom: 1px solid rgba(235, 235, 235, 1);
+}
+
+.wn-no-margin {
+    margin: 0;
+}
+
+.height-45 {
+    height: 45px;
+}
+
+.border-radius-20 {
+    border-radius: 20px;
+}

@@ -13,20 +13,23 @@ export class AppComponent {
     {
       name: 'Nairobi',
       country: 'KE',
-      temperature: 20,
-      humidity: 90
+      hasError: false,
+      loading: true,
+      selected: false
     },
     {
       name: 'Urubici',
       country: 'BR',
-      temperature: 15,
-      humidity: 90
+      hasError: false,
+      loading: true,
+      selected: false
     },
     {
       name: 'Nuuk',
       country: 'GL',
-      temperature: -5,
-      humidity: 90
+      hasError: false,
+      loading: true,
+      selected: false
     }
   ];
 }

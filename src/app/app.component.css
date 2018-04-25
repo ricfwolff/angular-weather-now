@@ -2,3 +2,31 @@
     padding-left: 24px;
     padding-right: 24px;
 }
+
+.flex-stretch {
+    flex: 1;
+}
+
+.height-55 {
+    height: 55px;
+}
+
+.wn-no-margin {
+    margin: 0;
+}
+
+.padding-top-55 {
+    padding-top: 55px;
+}
+
+.wn-cursor-pointer {
+    cursor: pointer;
+}
+
+.padding-top-25 {
+    padding-top: 25px;
+}
+
+.padding-bottom-24 {
+    padding-bottom: 24px;
+}

@@ -1,0 +1,29 @@
+.height-140 {
+    min-height: 140px;
+    max-height: 140px;
+}
+
+.line-height-140 {
+    line-height: 140px;
+}
+
+.wn-font-5-em {
+    font-size: 5em;
+}
+
+.wn-no-border-top {
+    border-top: 0px;
+}
+
+.wn-no-padding-bottom {
+    padding-bottom: 0px;
+}
+
+.wn-font-12-px {
+    font-size: 12px;
+}
+
+.wn-footer-bg-color {
+    background-color: #F1F1F1;
+    background-color: rgba(241, 241, 241, 0.5);
+}

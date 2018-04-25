@@ -1,7 +1,14 @@
-<mat-card>
-  <mat-card-title>{{city.name}},&nbsp;{{city.country}}</mat-card-title>
-  <mat-divider></mat-divider>
-  <mat-card-content>{{city.temperature}}º</mat-card-content>
-  <mat-divider></mat-divider>
-  <mat-card-footer>{{city.humidity}}</mat-card-footer>
-</mat-card>
+<div class="card text-center width-250 wn-box-shadow wn-no-margin">
+  <div class="card-header bg-white height-45 wn-bottom-divider">
+    {{city.name}},&nbsp;{{city.country}}
+  </div>
+  <div class="height-182 line-height-182" *ngIf="city.loading">
+    <img src="../../assets/loader.svg">
+  </div>
+  <div class="height-182" fxLayout="column" fxLayoutAlign="center center" *ngIf="city.hasError">
+    <span class="wn-color-red" fxFlex="0 0 100%">Something went wrong</span>
+    <br />
+    <button (click)="loadCityData()" fxFlex="0 0 100%" type="button" class="btn btn-outline-secondary border-radius-20">Try Again</button>
+  </div>
+  <app-city-weather-details [city]="city" *ngIf="!city.hasError && !city.loading"></app-city-weather-details>
+</div>
