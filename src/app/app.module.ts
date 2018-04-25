@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { NgIf } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // import { MatButtonModule, MatCheckboxModule, MatCardModule, MatToolbarModule, MatDividerModule} from '@angular/material';
 import {FlexLayoutModule} from "@angular/flex-layout";
@@ -11,6 +12,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { CityWeatherCardComponent } from './city-weather-card/city-weather-card.component';
 import { WeatherUnitDisplayComponent } from './weather-unit-display/weather-unit-display.component';
+import { ApiService } from './api.service';
 
 
 @NgModule({
@@ -27,9 +29,10 @@ import { WeatherUnitDisplayComponent } from './weather-unit-display/weather-unit
     // MatToolbarModule,
     // MatDividerModule,
     FlexLayoutModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
