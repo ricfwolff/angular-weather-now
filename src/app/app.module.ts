@@ -4,8 +4,9 @@ import { NgClass } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
-// import { MatButtonModule, MatCheckboxModule, MatCardModule, MatToolbarModule, MatDividerModule} from '@angular/material';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -32,7 +33,8 @@ import { CityWeatherDetailsComponent } from './city-weather-details/city-weather
     // MatDividerModule,
     FlexLayoutModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
