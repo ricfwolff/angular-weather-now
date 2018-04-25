@@ -25,7 +25,7 @@ export class AppComponent {
       selected: false
     },
     {
-      name: 'Nuukasldflajdf',
+      name: 'Nuuk',
       country: 'GL',
       hasError: false,
       loading: true,
