@@ -16,7 +16,7 @@
       [ngClass]="{'wn-color-blue': city.temperature < 6, 
                   'wn-color-orange': city.temperature >= 6 && city.temperature < 26,
                   'wn-color-red': city.temperature >= 26}">
-      {{city.temperature}}&deg;
+      {{city.temperature | number:'1.0-0'}}&deg;
     </p>
   </div>
   <div class="card-footer 

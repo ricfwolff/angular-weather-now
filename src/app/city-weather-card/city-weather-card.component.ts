@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {City} from '../city';
 import { ApiService } from '../api.service';
+import { DecimalPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-city-weather-card',
@@ -29,6 +31,9 @@ export class CityWeatherCardComponent implements OnInit {
         this.city.humidity = (data as any).main.humidity;
         this.city.loading = false;
         this.city.updatedAt = new Date();
-      }, err => this.city.hasError = true);
+      }, err => {
+        this.city.hasError = true;
+        this.city.loading = false;
+      });
   }
 }
