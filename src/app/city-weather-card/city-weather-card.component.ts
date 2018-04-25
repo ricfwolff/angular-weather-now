@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import {City} from '../city';
 import { ApiService } from '../api.service';
 import { DecimalPipe } from '@angular/common';
+import { Observable } from "rxjs";
+import { TimerObservable } from "rxjs/observable/TimerObservable";
+import 'rxjs/add/operator/takeWhile';
 
 
 @Component({
@@ -12,11 +15,18 @@ import { DecimalPipe } from '@angular/common';
 export class CityWeatherCardComponent implements OnInit {
 
   @Input() city: City;
+  private alive: boolean; 
+  private interval: number;
 
-  constructor(private apiService : ApiService) { }
+  constructor(private apiService : ApiService) {
+    this.alive = true;
+    this.interval = 600000;
+  }
 
   ngOnInit() {
-    this.loadCityData();
+    TimerObservable.create(0, this.interval)
+      .takeWhile(() => this.alive)
+      .subscribe(() => this.loadCityData());
   }
 
   loadCityData() {
@@ -35,5 +45,9 @@ export class CityWeatherCardComponent implements OnInit {
         this.city.hasError = true;
         this.city.loading = false;
       });
+  }
+
+  ngOnDestroy(){
+    this.alive = false; // switches your TimerObservable off
   }
 }
