@@ -4,11 +4,14 @@
   </div>
   <div class="height-182 line-height-182"
     *ngIf="city.loading">
-    reload
+    <img src="../../assets/loader.svg">
   </div>
-  <div class="height-182 line-height-182"
+  <div class="height-182" fxLayout="column" fxLayoutAlign="center center"
     *ngIf="city.hasError">
-    error
+    <span class="wn-color-red" fxFlex="0 0 100%">Something went wrong</span>
+    <br />
+    <button (click)="loadCityData()" fxFlex="0 0 100%"
+      type="button" class="btn btn-outline-secondary border-radius-20">Try Again</button>
   </div>
   <div class="card-block height-140 line-height-140"
     *ngIf="!city.loading && !city.hasError">

@@ -6,6 +6,7 @@
 <div class="flex-stretch padding-top-55 padding-bottom-24" 
   fxLayout="row" fxLayout.xs="column" 
   fxLayout.sm="column" fxLayoutAlign="center center">
+  
   <app-city-weather-card [city]="city" *ngFor="let city of cities" 
     (click)="city.selected = !city.selected"
     class="flex-item padding-sides-24 padding-top-25 
