@@ -1,12 +1,3 @@
-.height-140 {
-    min-height: 140px;
-    max-height: 140px;
-}
-
-.line-height-140 {
-    line-height: 140px;
-}
-
 .height-182 {
     min-height: 182px;
     max-height: 182px;
@@ -15,35 +6,15 @@
 .line-height-182 {
     line-height: 182px;
 }
+
 .width-250 {
     min-width: 250px;
     max-width: 250px;
     width: 250px;
 }
 
-.wn-footer-bg-color {
-    background-color: #F1F1F1;
-    background-color: rgba(241, 241, 241, 0.5);
-}
-
 .wn-bottom-divider {
     border-bottom: 1px solid rgba(235, 235, 235, 1);
-}
-
-.wn-no-border-top {
-    border-top: 0px;
-}
-
-.wn-no-padding-bottom {
-    padding-bottom: 0px;
-}
-
-.wn-font-5-em {
-    font-size: 5em;
-}
-
-.wn-font-12-px {
-    font-size: 12px;
 }
 
 .wn-no-margin {

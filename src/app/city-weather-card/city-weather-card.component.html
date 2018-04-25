@@ -2,44 +2,13 @@
   <div class="card-header bg-white height-45 wn-bottom-divider">
     {{city.name}},&nbsp;{{city.country}}
   </div>
-  <div class="height-182 line-height-182"
-    *ngIf="city.loading">
+  <div class="height-182 line-height-182" *ngIf="city.loading">
     <img src="../../assets/loader.svg">
   </div>
-  <div class="height-182" fxLayout="column" fxLayoutAlign="center center"
-    *ngIf="city.hasError">
+  <div class="height-182" fxLayout="column" fxLayoutAlign="center center" *ngIf="city.hasError">
     <span class="wn-color-red" fxFlex="0 0 100%">Something went wrong</span>
     <br />
-    <button (click)="loadCityData()" fxFlex="0 0 100%"
-      type="button" class="btn btn-outline-secondary border-radius-20">Try Again</button>
+    <button (click)="loadCityData()" fxFlex="0 0 100%" type="button" class="btn btn-outline-secondary border-radius-20">Try Again</button>
   </div>
-  <div class="card-block height-140 line-height-140"
-    *ngIf="!city.loading && !city.hasError">
-    <p class="card-text wn-font-5-em"
-      [ngClass]="{'wn-color-blue': city.temperature < 6, 
-                  'wn-color-orange': city.temperature >= 6 && city.temperature < 26,
-                  'wn-color-red': city.temperature >= 26}">
-      {{city.temperature | number:'1.0-0'}}&deg;
-    </p>
-  </div>
-  <div class="card-footer 
-    wn-footer-bg-color wn-no-border-top wn-font-12-px
-    wn-color-text-light wn-no-padding-bottom"
-    fxLayout="row" 
-    *ngIf="city.selected && !city.loading && !city.hasError">
-    <app-weather-unit-display [value]="city.humidity" 
-      [displayText]="'HUMIDITY'"
-      [unit]="'%'" fxFlex="50%" fxLayout="column">
-    </app-weather-unit-display>
-    <app-weather-unit-display [value]="city.pressure" 
-      [displayText]="'PRESSURE'"
-      [unit]="'hPa'" fxFlex="50%" fxLayout="column">
-    </app-weather-unit-display>
-  </div>
-  <div class="card-footer 
-    wn-footer-bg-color wn-no-border-top wn-font-12-px
-    wn-color-text-light"
-    *ngIf="!city.loading && !city.hasError">
-    Updated at {{city.updatedAt | date:'hh:mm:ss a'}}
-  </div>
+  <app-city-weather-details [city]="city" *ngIf="!city.hasError && !city.loading"></app-city-weather-details>
 </div>

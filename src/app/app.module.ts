@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { CityWeatherCardComponent } from './city-weather-card/city-weather-card.component';
 import { WeatherUnitDisplayComponent } from './weather-unit-display/weather-unit-display.component';
 import { ApiService } from './api.service';
+import { CityWeatherDetailsComponent } from './city-weather-details/city-weather-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CityWeatherCardComponent,
-    WeatherUnitDisplayComponent
+    WeatherUnitDisplayComponent,
+    CityWeatherDetailsComponent
   ],
   imports: [
     BrowserModule,
