@@ -8,7 +8,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { CityWeatherCardComponent } from './city-weather-card/city-weather-card.component';
@@ -32,7 +31,6 @@ import { CityWeatherDetailsComponent } from './city-weather-details/city-weather
     // MatToolbarModule,
     // MatDividerModule,
     FlexLayoutModule,
-    NgbModule.forRoot(),
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],

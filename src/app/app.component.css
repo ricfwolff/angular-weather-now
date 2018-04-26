@@ -30,3 +30,11 @@
 .padding-bottom-24 {
     padding-bottom: 24px;
 }
+
+.fixed-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1030;
+}
