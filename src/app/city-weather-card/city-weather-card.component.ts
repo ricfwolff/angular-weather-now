@@ -40,7 +40,7 @@ export class CityWeatherCardComponent implements OnInit {
         this.city.pressure = (data as any).main.pressure;
         this.city.humidity = (data as any).main.humidity;
         this.city.loading = false;
-        this.city.updatedAt = new Date();
+        this.city.updatedAt = (data as any).updatedAt;
       }, err => {
         this.city.hasError = true;
         this.city.loading = false;
