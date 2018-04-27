@@ -1,13 +1,13 @@
 <div class="card-block height-140 line-height-140">
-  <p class="card-text wn-font-5-em" [ngClass]="{'wn-color-blue': city.temperature < 6, 
-                  'wn-color-orange': city.temperature >= 6 && city.temperature < 26,
-                  'wn-color-red': city.temperature >= 26}">
-    {{city.temperature | number:'1.0-0'}}&deg;
+  <p class="card-text wn-font-5-em" [ngClass]="{'wn-color-blue': city?.temperature < 6, 
+                  'wn-color-orange': city?.temperature >= 6 && city?.temperature < 26,
+                  'wn-color-red': city?.temperature >= 26}">
+    {{city?.temperature | number:'1.0-0'}}&deg;
   </p>
 </div>
 <div class="card-footer 
     wn-footer-bg-color wn-no-border-top wn-font-12-px
-    wn-color-text-light wn-no-padding-bottom" fxLayout="row" *ngIf="city.selected">
+    wn-color-text-light wn-no-padding-bottom" fxLayout="row" *ngIf="city?.selected">
   <app-weather-unit-display [value]="city.humidity" [displayText]="'HUMIDITY'" [unit]="'%'" fxFlex="50%" fxLayout="column">
   </app-weather-unit-display>
   <app-weather-unit-display [value]="city.pressure" [displayText]="'PRESSURE'" [unit]="'hPa'" fxFlex="50%" fxLayout="column">
@@ -16,5 +16,5 @@
 <div class="card-footer 
     wn-footer-bg-color wn-no-border-top wn-font-11-px
     wn-color-text-light">
-  Updated at {{city.updatedAt | date:'hh:mm:ss a'}}
+  Updated at {{city?.updatedAt | date:'hh:mm:ss a'}}
 </div>

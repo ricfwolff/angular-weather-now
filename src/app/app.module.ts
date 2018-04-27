@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { NgIf } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
@@ -34,7 +34,7 @@ import { CityWeatherDetailsComponent } from './city-weather-details/city-weather
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
-  providers: [ApiService],
+  providers: [HttpClientModule, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
