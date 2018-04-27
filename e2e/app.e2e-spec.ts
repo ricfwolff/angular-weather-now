@@ -1,4 +1,5 @@
 import { AppPage } from './app.po';
+import { browser } from 'protractor';
 
 describe('weather-now App', () => {
   let page: AppPage;
@@ -7,8 +8,9 @@ describe('weather-now App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should show card with Nuuk, GL in the header', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    browser.waitForAngularEnabled(false);
+    expect(page.getCardHeader()).toEqual('Nuuk, GL');
   });
 });
